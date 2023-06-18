@@ -64,6 +64,91 @@ ignore_with_permission: conditionalevents.ignore.event4
 ignore_if_cancelled: true
 ```
 
-## Allow Math formulas in Conditions(允许条件中使用数学方程)
+## Allow Math formulas in Conditions(允许条件中使用数学公式)
 
-如果你想在条件中
+如果你想在条件中使用数学公式，你需要开启此选项
+
+```
+allow_math_formulas_in_conditions: true
+conditions:
+- '%command% equals /test-kills'
+- '%statistic_player_kills% >= %statistic_deaths%*2'
+```
+
+## One Time(一次性)
+
+如果设置为true，则此事件只会执行一次。你可以设置一个动作组来执行玩家执行一次之后的动作。
+
+{% hint style="warning" %}
+动作组名**必须为**“one\_time”
+{% endhint %}
+
+```
+one_time: true
+actions:
+  one_time:
+  - "message: &cYou can claim this reward just once!"
+```
+
+## Cooldown(冷却)
+
+用这个你可以设置时间的冷却时间。添加专门的动作组可以在玩家处于冷却时间内时执行动作。
+
+{% hint style="warning" %}
+动作组名**必须为**“cooldown”
+{% endhint %}
+
+{% hint style="warning" %}
+OP会跳过冷却时间，所以确保你测试的时候不是OP
+{% endhint %}
+
+```
+cooldown: 3600
+actions:
+  cooldown:
+  - "cancel_event: true"
+  - "message: &cYou need to wait &e%time% &cbefore claiming your reward again."
+```
+
+## Enabled(是否开启)
+
+设置为true开启此事件，设置为false关闭
+
+```
+enabled: false
+```
+
+## Repetitive Time(重复时间)
+
+如果事件种类设置为repetitive或者repetitive\_server，此选项会定义事件重复的时间间隔(以刻计，20刻=1秒)
+
+```
+type: repetitive
+repetitive_time: 10
+```
+
+## Prevent Cooldown/One Time Activation(阻止冷却/一次性事件执行)
+
+使用execute执行其他动作时这个选项很有用，你可以定义一个动作列表，把你不想触发冷却/一次性事件的动作放进去。
+
+```
+prevent_cooldown_activation:
+- "actions2"
+prevent_one_time_activation:
+- "actions2"
+- "actions3"
+```
+
+在某些情况下，一些动作组仅用于向玩家显示某些错误。如果不将此选项添加到此类事件，则会导致用户执行动作组以获取错误消息，并同时激活一次性事件，这意味着玩家将无法再使用此事件。而真正要触发的事件实际上并未真正执行，因此此选项可帮助您解决此问题。
+
+## Custom Event Data(自定义事件数据)
+
+ConditionalEvents可以让你检查任何你想要的事件，甚至是其他插件的。具体详见[此页](zi-ding-yi-shi-jian.md)
+
+```
+custom_event_data:
+  event: dt.ajneb97.api.TurretPlaceEvent
+  player_variable: getPlayer()
+  variables_to_capture:
+  - '%turret_world%;getLocation().getWorld().getName()'
+```
