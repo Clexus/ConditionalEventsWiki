@@ -1,1 +1,3 @@
-# ConditionalEventsWiki
+# 请注意
+
+此WIKI已过期，将于近期大改，目前请移步官方wiki
