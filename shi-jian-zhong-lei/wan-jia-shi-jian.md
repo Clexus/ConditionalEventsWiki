@@ -2,7 +2,7 @@
 
 ## PLAYER JOIN
 
-Event called when a player joins the server.
+玩家加入服务器时触发.
 
 ```yaml
 example:
