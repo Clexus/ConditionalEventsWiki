@@ -3,10 +3,10 @@
 ## CITIZENS RIGHT CLICK NPC
 
 {% hint style="warning" %}
-Requires Citizens: [https://www.spigotmc.org/resources/citizens.13811/](https://www.spigotmc.org/resources/citizens.13811/)
+需要Citizens: [https://www.spigotmc.org/resources/citizens.13811/](https://www.spigotmc.org/resources/citizens.13811/)
 {% endhint %}
 
-Event called when a player right clicks on a Citizens NPC.
+玩家与Citizens的NPC交互时触发.
 
 ```yaml
 example:
@@ -19,19 +19,19 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* <mark style="color:green;">%npc\_id%</mark> (ID of the clicked NPC)
-* <mark style="color:green;">%npc\_name%</mark> (Name of the clicked NPC)
+* <mark style="color:green;">%npc\_id%</mark> (NPC的ID)
+* <mark style="color:green;">%npc\_name%</mark> (NPC的名字)
 {% endhint %}
 
 ## WGEVENTS REGION ENTER
 
 {% hint style="warning" %}
-Requires WorldGuard Events: [https://www.spigotmc.org/resources/worldguard-events.65176/](https://www.spigotmc.org/resources/worldguard-events.65176/)
+需要WorldGuard Events: [https://www.spigotmc.org/resources/worldguard-events.65176/](https://www.spigotmc.org/resources/worldguard-events.65176/)
 {% endhint %}
 
-Event called when a player enters a WorldGuard region.
+当玩家进入WorldGuard区域的时候触发.
 
 ```yaml
 example:
@@ -44,18 +44,18 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* <mark style="color:green;">%region%</mark> (Entered region)
+* <mark style="color:green;">%region%</mark> (进入的区域名)
 {% endhint %}
 
 ## WGEVENTS REGION LEAVE
 
 {% hint style="warning" %}
-Requires WorldGuard Events: [https://www.spigotmc.org/resources/worldguard-events.65176/](https://www.spigotmc.org/resources/worldguard-events.65176/)
+需要WorldGuard Events: [https://www.spigotmc.org/resources/worldguard-events.65176/](https://www.spigotmc.org/resources/worldguard-events.65176/)
 {% endhint %}
 
-Event called when a player leaves a WorldGuard region.
+玩家离开WorldGuard区域时触发.
 
 ```yaml
 example:
@@ -68,18 +68,18 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* <mark style="color:green;">%region%</mark> (Leaved region)
+* <mark style="color:green;">%region%</mark> (离开的区域名)
 {% endhint %}
 
 ## PROTOCOLLIB RECEIVE MESSAGE
 
 {% hint style="warning" %}
-Requires ProtocolLib: [https://www.spigotmc.org/resources/protocollib.1997/](https://www.spigotmc.org/resources/protocollib.1997/)
+需要ProtocolLib: [https://www.spigotmc.org/resources/protocollib.1997/](https://www.spigotmc.org/resources/protocollib.1997/)
 {% endhint %}
 
-Event called when a player receives a chat message.
+玩家收到聊天消息时触发.
 
 ```yaml
 example:
@@ -94,6 +94,6 @@ example:
 {% hint style="success" %}
 **Variables:**
 
-* <mark style="color:green;">%normal\_message%</mark> (Message received including color codes)
-* <mark style="color:green;">%json\_message%</mark> (Complete JSON format of the message received)
+* <mark style="color:green;">%normal\_message%</mark> (包含颜色的聊天消息)
+* <mark style="color:green;">%json\_message%</mark> (收到消息的完整JSON格式)
 {% endhint %}

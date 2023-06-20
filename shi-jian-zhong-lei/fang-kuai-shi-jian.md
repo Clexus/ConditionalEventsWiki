@@ -2,7 +2,7 @@
 
 ## BLOCK INTERACT
 
-Event called when a player clicks on a block.
+玩家与方块交互时触发.
 
 ```yaml
 example:
@@ -21,18 +21,18 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
 *   <mark style="color:green;">%action\_type%</mark> (RIGHT\_CLICK, LEFT\_CLICK, SHIFT\_RIGHT\_CLICK, SHIFT\_LEFT\_CLICK
 
-    &#x20;or PHYSICAL. Use PHYSICAL when you want to check players on pressure plates)
-* ConditionalEvents <mark style="color:green;">block variables</mark>
-* ConditionalEvents <mark style="color:green;">item variables</mark> (for item in hand)
+    &#x20;或 PHYSICAL. PHYSICAL 用于玩家触发压力板)
+* ConditionalEvents [<mark style="color:green;">方块变量</mark>](../bian-liang.md#fang-kuai-bian-liang)
+* ConditionalEvents [<mark style="color:green;">物品变量</mark>](../bian-liang.md#wu-pin-bian-liang) (用于手上物品)
 {% endhint %}
 
 ## BLOCK BREAK
 
-Event called when a player breaks a block.
+玩家破坏方块时触发.
 
 ```yaml
 example:
@@ -47,15 +47,15 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* ConditionalEvents <mark style="color:green;">block variables</mark>
-* ConditionalEvents <mark style="color:green;">item variables</mark> (for item in hand)
+* ConditionalEvents [<mark style="color:green;">方块变量</mark>](../bian-liang.md#fang-kuai-bian-liang)
+* ConditionalEvents [<mark style="color:green;">物品变量</mark>](../bian-liang.md#wu-pin-bian-liang) (用于手上物品)
 {% endhint %}
 
 ## BLOCK PLACE
 
-Event called when a player places a block.
+玩家放置方块时触发
 
 ```yaml
 example:
@@ -70,8 +70,8 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* ConditionalEvents <mark style="color:green;">block variables</mark>
-* ConditionalEvents <mark style="color:green;">item variables</mark> (for item in hand)
+* ConditionalEvents [<mark style="color:green;">方块变量</mark>](../bian-liang.md#fang-kuai-bian-liang)
+* ConditionalEvents [<mark style="color:green;">物品变量</mark>](../bian-liang.md#wu-pin-bian-liang) (用于手上物品)
 {% endhint %}

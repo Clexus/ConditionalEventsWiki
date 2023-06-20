@@ -49,7 +49,7 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
 * <mark style="color:green;">%name%</mark> (要加入服务器的玩家名)
 * <mark style="color:green;">%ip%</mark> (玩家IP)
@@ -96,7 +96,7 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
 * <mark style="color:green;">%cause%</mark> (死亡原因. 原因列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html))
 * <mark style="color:green;">%killer\_type%</mark> (如果玩家死于实体，实体的类型，实体列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html))
@@ -120,7 +120,7 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
 * <mark style="color:green;">%command%</mark> (玩家使用的完整命令，例如"/sudo A B")
 * <mark style="color:green;">%main\_command%</mark> (玩家使用的主命令，例如"sudo")
@@ -145,7 +145,7 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
 * <mark style="color:green;">%message%</mark> (玩家输入的消息)
 {% endhint %}
@@ -163,7 +163,7 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
 * <mark style="color:green;">%old\_level%</mark> (玩家先前的等级)
 * <mark style="color:green;">%new\_level%</mark> (玩家现在的等级)
@@ -182,7 +182,7 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
 * <mark style="color:green;">%world\_from%</mark> (先前所在的世界)
 * <mark style="color:green;">%world\_to%</mark> (玩家前往的世界)
@@ -210,7 +210,7 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
 * <mark style="color:green;">%damage%</mark> (玩家所造成的伤害)
 * <mark style="color:green;">%attack\_type%</mark> (伤害物的种类，对于抛射物来说，可以是: ARROW, TRIDENT, SNOWBALL. 如果伤害并非来源于抛射物, 那么会返回PLAYER)
@@ -237,7 +237,7 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
 * ConditionalEvents [<mark style="color:green;">物品变量</mark>](../bian-liang.md#wu-pin-bian-liang) (用于手上物品)
 * ConditionalEvents [<mark style="color:green;">受害者变量</mark>](../bian-liang.md#shou-hai-zhe-bian-liang)
@@ -262,7 +262,7 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
 * <mark style="color:green;">%cause%</mark> (受伤的原因。原因列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html))
 * <mark style="color:green;">%damage%</mark> (玩家受到的伤害)
@@ -290,7 +290,7 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
 * <mark style="color:green;">%armor\_type%</mark> (护甲种类. 可为: HELMET, CHESTPLATE, LEGGINGS or BOOTS)
 * <mark style="color:green;">%equip\_type%</mark> (可为: EQUIP(装备) 或 UNEQUIP(脱下))
@@ -313,7 +313,7 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
 * <mark style="color:green;">%cause%</mark> (传送原因. 原因列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerTeleportEvent.TeleportCause.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerTeleportEvent.TeleportCause.html))
 * <mark style="color:green;">%from\_x%</mark> (玩家原来所在处的X坐标)
@@ -343,7 +343,7 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
 * <mark style="color:green;">%result%</mark> (上床原因? 原因列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerBedEnterEvent.BedEnterResult.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerBedEnterEvent.BedEnterResult.html))
 {% endhint %}
@@ -365,7 +365,7 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
 * ConditionalEvents [物品变量](../bian-liang.md#wu-pin-bian-liang) (用于手上物品)
 {% endhint %}
@@ -387,7 +387,7 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
 * <mark style="color:green;">%state%</mark> (当前钓鱼的状态. 状态列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerFishEvent.State.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerFishEvent.State.html))
 * <mark style="color:green;">%caught\_type%</mark> (抓到的实体. 实体列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html))
@@ -410,15 +410,15 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* <mark style="color:green;">%inventory\_type%</mark> (Type of the opened inventory. All types here: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/InventoryType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/InventoryType.html))
-* <mark style="color:green;">%inventory\_title%</mark> (Title of the opened inventory without color codes)
+* <mark style="color:green;">%inventory\_type%</mark> (打开容器的种类. 所有的种类: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/InventoryType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/InventoryType.html))
+* <mark style="color:green;">%inventory\_title%</mark> (没有颜色代码的容器名称)
 {% endhint %}
 
 ## PLAYER STATISTIC
 
-Event called when a player statistic is incremented, like certain blocks breaked, jumps, items pickup...
+玩家统计数据更改时触发, 比如方块被破坏，跳跃，捡起物品...
 
 ```yaml
 example:
@@ -440,20 +440,20 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* <mark style="color:green;">%statistic\_name%</mark> (Name of the incremented statistic. All names here: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Statistic.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Statistic.html))
-* <mark style="color:green;">%new\_value%</mark> (New value of this statistic)
-* <mark style="color:green;">%previous\_value%</mark> (Previous value of this statistic)
-* <mark style="color:green;">%entity%</mark> (Associated entity type for this statistic, if present. All types here: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html))
-* <mark style="color:green;">%block%</mark> (Associated block type for this statistic, if present. All types here: [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html))
+* <mark style="color:green;">%statistic\_name%</mark> (发生更改的统计数据. 列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Statistic.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Statistic.html))
+* <mark style="color:green;">%new\_value%</mark> (统计数据的新值)
+* <mark style="color:green;">%previous\_value%</mark> (旧值)
+* <mark style="color:green;">%entity%</mark> (如果存在的话，与统计数据相关的实体. 实体列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html))
+* <mark style="color:green;">%block%</mark> (如果存在的话, 与统计数据相关的方块. 方块列表: [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html))
 {% endhint %}
 
 
 
 ## PLAYER SNEAK
 
-Event called when a player toggles their sneaking state.
+玩家切换下蹲时触发.
 
 ```yaml
 example:
@@ -468,7 +468,7 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* <mark style="color:green;">%is\_sneaking%</mark> (Whether the player is sneaking or not. Will return "true" or "false")
+* <mark style="color:green;">%is\_sneaking%</mark> (玩家是否下蹲. 会返回 "true" 或 "false")
 {% endhint %}

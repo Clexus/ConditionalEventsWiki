@@ -2,7 +2,7 @@
 
 ## ITEM INTERACT
 
-Event called when a player clicks on an item.
+玩家与物品交互时触发.
 
 ```yaml
 example:
@@ -16,15 +16,15 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* <mark style="color:green;">%action\_type%</mark> (Could be: RIGHT\_CLICK, LEFT\_CLICK, SHIFT\_RIGHT\_CLICK, SHIFT\_LEFT\_CLICK or PHYSICAL. Use PHYSICAL when you want to check players on pressure plates)
-* ConditionalEvents <mark style="color:green;">item variables</mark>
+* <mark style="color:green;">%action\_type%</mark> (可为: RIGHT\_CLICK, LEFT\_CLICK, SHIFT\_RIGHT\_CLICK, SHIFT\_LEFT\_CLICK 或 PHYSICAL. PHYSICAL用于检测玩家是否在压力板上\[存疑，PHYSICAL不应该存在于此处])
+* ConditionalEvents [<mark style="color:green;">物品变量</mark>](../bian-liang.md#wu-pin-bian-liang)
 {% endhint %}
 
 ## ITEM CONSUME
 
-Event called when a player consumes an item (eat food for example)
+玩家消耗物品时触发(比如吃东西)
 
 ```yaml
 example:
@@ -38,14 +38,14 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* ConditionalEvents <mark style="color:green;">item variables</mark>
+* ConditionalEvents [<mark style="color:green;">物品变量</mark>](../bian-liang.md#wu-pin-bian-liang)
 {% endhint %}
 
 ## ITEM PICKUP
 
-Event called when a player pickups an item.
+玩家捡起物品时触发.
 
 ```yaml
 example:
@@ -58,14 +58,14 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* ConditionalEvents <mark style="color:green;">item variables</mark>
+* ConditionalEvents [物品变量](../bian-liang.md#wu-pin-bian-liang)
 {% endhint %}
 
 ## ITEM MOVE
 
-Event called when a player tries to move an item from its inventory.
+玩家移动容器中的物品时触发.
 
 ```yaml
 example:
@@ -79,16 +79,16 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* <mark style="color:green;">%inventory\_type%</mark> (Type of the open inventory. All types on this link: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/InventoryType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/InventoryType.html))
-* <mark style="color:green;">%slot%</mark> (Selected slot)
-* ConditionalEvents <mark style="color:green;">item variables</mark>
+* <mark style="color:green;">%inventory\_type%</mark> (开启容器的种类. 种类列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/InventoryType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/InventoryType.html))
+* <mark style="color:green;">%slot%</mark> (选中的栏位)
+* ConditionalEvents [<mark style="color:green;">物品变量</mark>](../bian-liang.md#wu-pin-bian-liang)
 {% endhint %}
 
 ## ITEM CRAFT
 
-Event called when a player is about to craft an item.
+玩家制作物品时触发.
 
 ```yaml
 example:
@@ -102,14 +102,14 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* ConditionalEvents <mark style="color:green;">item variables</mark>
+* ConditionalEvents [<mark style="color:green;">物品变量</mark>](../bian-liang.md#wu-pin-bian-liang)
 {% endhint %}
 
 ## ITEM DROP
 
-Event called when a player drops an item.
+玩家掉落物品时触发
 
 ```yaml
 example:
@@ -122,14 +122,14 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* ConditionalEvents <mark style="color:green;">item variables</mark>
+* ConditionalEvents [<mark style="color:green;">物品变量</mark>](../bian-liang.md#wu-pin-bian-liang)
 {% endhint %}
 
 ## ITEM SELECT
 
-Event called when a player selects/deselects an item in their hotbar.
+玩家选中/取消选中快捷栏里的物品时触发.
 
 ```yaml
 example:
@@ -144,15 +144,15 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* <mark style="color:green;">%select\_type%</mark> (Could be: SELECT or DESELECT)
-* ConditionalEvents <mark style="color:green;">item variables</mark>
+* <mark style="color:green;">%select\_type%</mark> (可为: SELECT 或 DESELECT)
+* ConditionalEvents [<mark style="color:green;">物品变量</mark>](../bian-liang.md#wu-pin-bian-liang)
 {% endhint %}
 
 ## ITEM ENCHANT
 
-Event called when a player enchants an item.
+玩家附魔时触发.
 
 ```yaml
 example:
@@ -167,15 +167,15 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* <mark style="color:green;">%enchantment\_list%</mark> (List of enchantments to be applied to the item. It will return a string with the following format: `<enchantment1>:<level1>;<enchantment2>:<level2>;...`)
-* ConditionalEvents <mark style="color:green;">item variables</mark>
+* <mark style="color:green;">%enchantment\_list%</mark> (物品的附魔列表. 会返回一个以下格式的列表: `<enchantment1>:<level1>;<enchantment2>:<level2>;...`)
+* ConditionalEvents [<mark style="color:green;">物品变量</mark>](../bian-liang.md#wu-pin-bian-liang)
 {% endhint %}
 
 ## ITEM REPAIR
 
-Event called when a player repairs an item.
+玩家修复物品时触发.
 
 ```yaml
 example:
@@ -190,12 +190,12 @@ example:
 ```
 
 {% hint style="success" %}
-V**ariables:**
+**变量:**
 
-* <mark style="color:green;">%rename\_text%</mark> (New name of the item if the player is renaming it)
-* ConditionalEvents <mark style="color:green;">item variables</mark>
+* <mark style="color:green;">%rename\_text%</mark> (玩家重命名物品之后的物品名)
+* ConditionalEvents [<mark style="color:green;">物品变量</mark>](../bian-liang.md#wu-pin-bian-liang)
 {% endhint %}
 
 {% hint style="warning" %}
-Only works on 1.13+!
+只能在1.13+使用!
 {% endhint %}

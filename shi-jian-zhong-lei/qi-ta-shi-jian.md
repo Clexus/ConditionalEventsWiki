@@ -2,7 +2,7 @@
 
 ## ENTITY INTERACT
 
-Event called when a player right clicks an entity.
+玩家与实体交互时触发
 
 ```yaml
 example:
@@ -16,19 +16,19 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* ConditionalEvents <mark style="color:green;">entity variables</mark> (for clicked entity)
-* ConditionalEvents <mark style="color:green;">item variables</mark> (for item in hand)
+* ConditionalEvents [实体变量](../bian-liang.md#shi-ti-bian-liang)(用于点击的实体)
+* ConditionalEvents [<mark style="color:green;">物品变量</mark>](../bian-liang.md#wu-pin-bian-liang)(用于手上物品)
 {% endhint %}
 
 {% hint style="info" %}
-On this event you can use target player variables and to\_target actions.
+此事件可以使用目标玩家变量(%target:XXXXX%)和to\_target动作.
 {% endhint %}
 
 ## ENTITY SPAWN
 
-Event called when an entity (animal or monster) is going to spawn.
+实体将要生成时触发.
 
 ```yaml
 example:
@@ -42,19 +42,19 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* <mark style="color:green;">%reason%</mark> (The reason of the event, why is the entity going to spawn. All reasons here: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/CreatureSpawnEvent.SpawnReason.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/CreatureSpawnEvent.SpawnReason.html))
-* ConditionalEvents <mark style="color:green;">entity variables</mark> (for entity about to spawn)
+* <mark style="color:green;">%reason%</mark> (生成原因. 原因列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/CreatureSpawnEvent.SpawnReason.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/CreatureSpawnEvent.SpawnReason.html))
+* ConditionalEvents [实体变量](../bian-liang.md#shi-ti-bian-liang) (用于将要生成的实体)
 {% endhint %}
 
 {% hint style="warning" %}
-This is not a player event, which means you can't use player variables or player action.
+这个事件不是玩家事件，你不能使用玩家相关的变量.
 {% endhint %}
 
 ## CONSOLE COMMAND
 
-Event called when the console executes a command.
+后台执行命令时触发.
 
 ```yaml
 example:
@@ -68,22 +68,18 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
-* <mark style="color:green;">%command%</mark> (The full command the console used)
-* <mark style="color:green;">%main\_command%</mark> (The main command without arguments)
-* <mark style="color:green;">%arg\_X%</mark> (The argument in the X position of the command. If the command is **`announce hello world`** the %arg\_1% variable would be "hello" and the %arg\_2% would be "world")
-* <mark style="color:green;">%args\_length%</mark> (The amount of arguments of the command)
-* <mark style="color:green;">%args\_substring\_\<arg1>-\<arg2>%</mark> (This variable will create a text using a first argument and a last argument. For example, if the command is **`announce I am currently doing a Youtube livestreaming`**, you could use the %args\_substring\_1-6% variable to take arg1, arg2,...,arg6 and get the text that the player is announcing. If you don't care about the arguments length, instead of 6 use a large number like 100)
+* 同[PLAYER\_COMMAND](wan-jia-shi-jian.md#player-command)
 {% endhint %}
 
 {% hint style="warning" %}
-This is not a player event, which means you can't use player variables or player action.
+这个事件不是玩家事件，你不能使用玩家相关的变量.
 {% endhint %}
 
 ## REPETITIVE
 
-The repetitive event works by checking for conditions **for each player** periodically. The time is defined in the `repetitive_time` option. This option defines the period of time in TICKS (20 ticks = 1 second) when checking the conditions.
+repetitive事件为每个**玩家**周期性地检查条件。时间在`repetitive_time`下定义，以刻为单位，20秒为1刻
 
 ```yaml
 example:
@@ -104,7 +100,7 @@ example:
 
 ## REPETITIVE SERVER
 
-The repetitive server event works by checking for conditions **of the server** periodically (like local time, but no player variables). The time is defined in the `repetitive_time` option. This option defines the period of time in TICKS (20 ticks = 1 second) when checking the conditions.
+repetitive server事件为**服务器**周期性地检查条件 (比如本地时间，不能使用玩家变量). 时间在`repetitive_time`下定义，以刻为单位，20秒为1刻
 
 ```yaml
 example:
@@ -120,12 +116,12 @@ example:
 {% endhint %}
 
 {% hint style="warning" %}
-This is not a player event, which means you can't use player variables or player action.
+这个事件不是玩家事件，你不能使用玩家相关的变量.
 {% endhint %}
 
 ## CALL
 
-The call event is a special event that will be executed ONLY from the actions of another event (using the call\_event action).
+call 事件是一种特殊的事件，它只能由别的事件通过call\_event执行
 
 ```yaml
 example:
@@ -144,7 +140,7 @@ example2:
       - "message: This message will be sent only when event 'example2' is called"
 ```
 
-This means you can now check for conditions after actions execution, using a complementary call event. You can also pass variables from an event to another to make it more specific.
+这意味着你现在可以在动作执行后检查条件，只需使用一个补充的call事件. 你也可以从一个事件传递变量到另一个事件来让它变得更具体
 
 ```yaml
 example:
@@ -177,4 +173,4 @@ example2:
 
 ## CUSTOM
 
-Any custom event that you want. You can use events from other plugins, more info on the [**Custom Events**](broken-reference) page.
+可以是任何你想要的自定义事件. 你可以使用别的插件的事件, 更多信息看[自定义事件](../zi-ding-yi-shi-jian.md)页面.
