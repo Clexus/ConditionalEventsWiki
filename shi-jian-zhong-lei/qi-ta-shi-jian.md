@@ -99,7 +99,7 @@ example:
 ```
 
 {% hint style="info" %}
-This event has no variables, but you can still use ConditionalEvents variables or PlaceholderAPI variables.
+此事件没有变量，但是你仍然可以使用ConditionalEvents的变量或者PlaceholderAPI的变量。
 {% endhint %}
 
 ## REPETITIVE SERVER
@@ -116,7 +116,7 @@ example:
 ```
 
 {% hint style="info" %}
-This event has no variables, but you can still use ConditionalEvents variables or PlaceholderAPI variables.
+此事件没有变量，但是你仍然可以使用ConditionalEvents的变量或者PlaceholderAPI的变量。
 {% endhint %}
 
 {% hint style="warning" %}
@@ -166,11 +166,13 @@ example2:
 ```
 
 {% hint style="info" %}
-This event has no variables, but you can still use ConditionalEvents variables or PlaceholderAPI variables. Remember that a call event can be executed passing some variables from another event.
+此事件没有变量，但是你仍然可以使用ConditionalEvents的变量或者PlaceholderAPI的变量。
+
+记住，call类事件可以用来执行一些将变量传递到别的事件的事情。
 {% endhint %}
 
 {% hint style="info" %}
-This event will be a player event if the original event which was called from is a player event.
+如果某事件由玩家事件唤起，那么此事件也会变成玩家事件。
 {% endhint %}
 
 ## CUSTOM

@@ -13,12 +13,12 @@ example:
 ```
 
 {% hint style="info" %}
-This event has no variables, but you can still use ConditionalEvents variables or PlaceholderAPI variables.
+此事件没有变量，但是你仍然可以使用ConditionalEvents的变量或者PlaceholderAPI的变量。
 {% endhint %}
 
 ## PLAYER LEAVE
 
-Event called when a player leaves the server.
+玩家退出服务器时触发.
 
 ```yaml
 example:
@@ -29,12 +29,12 @@ example:
 ```
 
 {% hint style="info" %}
-This event has no variables, but you can still use ConditionalEvents variables or PlaceholderAPI variables.
+此事件没有变量，但是你仍然可以使用ConditionalEvents的变量或者PlaceholderAPI的变量。
 {% endhint %}
 
 ## PLAYER PRE JOIN
 
-Event called when a player tries to join the server.
+玩家准备加入服务器时触发.
 
 ```yaml
 example:
@@ -51,22 +51,22 @@ example:
 {% hint style="success" %}
 **Variables:**
 
-* <mark style="color:green;">%name%</mark> (Name of the player trying to join the server)
-* <mark style="color:green;">%ip%</mark> (IP of the player)
-* <mark style="color:green;">%uuid%</mark> (UUID of the player)
+* <mark style="color:green;">%name%</mark> (要加入服务器的玩家名)
+* <mark style="color:green;">%ip%</mark> (玩家IP)
+* <mark style="color:green;">%uuid%</mark> (玩家UUID)
 {% endhint %}
 
 {% hint style="warning" %}
-This is not a player event, which means you can't use player variables or player actions. Don't be confused, it is called a "player pre join", but it is a special event which doesn't contain player data.
+这实际上不是一个玩家事件，这意味着你不能使用玩家相关的变量. 不要感到疑惑, 虽然这个事件叫做 "player pre join", 但是它是一个不包含玩家数据的特殊事件.
 {% endhint %}
 
 {% hint style="warning" %}
-You can't use `cancel_event` action on this event. If you want to block the player from joining, use the `prevent_join` action instead.
+你不能在这个事件中使用 `cancel_event` 动作. 如果你想阻止玩家进服, 请使用 `prevent_join`.
 {% endhint %}
 
 ## PLAYER RESPAWN
 
-Event called when a player respawns.
+玩家重生时触发
 
 ```yaml
 example:
@@ -80,12 +80,12 @@ example:
 ```
 
 {% hint style="info" %}
-This event has no variables, but you can still use ConditionalEvents variables or PlaceholderAPI variables.
+此事件没有变量，但是你仍然可以使用ConditionalEvents的变量或者PlaceholderAPI的变量。
 {% endhint %}
 
 ## PLAYER DEATH
 
-Event called when a player dies.
+玩家死亡时触发.
 
 ```yaml
 example:
@@ -98,15 +98,15 @@ example:
 {% hint style="success" %}
 **Variables:**
 
-* <mark style="color:green;">%cause%</mark> (Cause of death. All causes here: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html))
-* <mark style="color:green;">%killer\_type%</mark> (If the player dies because of an entity, which type of entity. All types on this link: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html))
-* <mark style="color:green;">%killer\_name%</mark> (If the player dies because of an entity, the name of this entity without color codes)
-* <mark style="color:green;">%killer\_color\_format\_name%</mark> (The name of the killer including color codes)
+* <mark style="color:green;">%cause%</mark> (死亡原因. 原因列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html))
+* <mark style="color:green;">%killer\_type%</mark> (如果玩家死于实体，实体的类型，实体列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html))
+* <mark style="color:green;">%killer\_name%</mark> (如果玩家死于实体，实体不带颜色的名字)
+* <mark style="color:green;">%killer\_color\_format\_name%</mark> (带颜色的名字)
 {% endhint %}
 
 ## PLAYER COMMAND
 
-Event called when a player executes a command.
+玩家输入命令时触发.
 
 ```yaml
 example:
@@ -122,16 +122,16 @@ example:
 {% hint style="success" %}
 **Variables:**
 
-* <mark style="color:green;">%command%</mark> (The full command the player used)
-* <mark style="color:green;">%main\_command%</mark> (The main command without arguments)
-* <mark style="color:green;">%arg\_X%</mark> (The argument in the X position of the command. If the command is **`/announce hello world`** the %arg\_1% variable would be "hello" and the %arg\_2% would be "world")
-* <mark style="color:green;">%args\_length%</mark> (The amount of arguments of the command)
-* <mark style="color:green;">%args\_substring\_\<arg1>-\<arg2>%</mark> (This variable will create a text using a first argument and a last argument. For example, if the command is **`/announce I am currently doing a Youtube livestreaming`**, you could use the %args\_substring\_1-6% variable to take arg1, arg2,...,arg6 and get the text that the player is announcing. If you don't care about the arguments length, instead of 6 use a large number like 100)
+* <mark style="color:green;">%command%</mark> (玩家使用的完整命令，例如"/sudo A B")
+* <mark style="color:green;">%main\_command%</mark> (玩家使用的主命令，例如"sudo")
+* <mark style="color:green;">%arg\_X%</mark> (命令的第X个参数. 如果命令是 **`/announce hello world`** 那么 %arg\_1% 就是"hello"，%arg\_2% 就是"world")
+* <mark style="color:green;">%args\_length%</mark> (命令的参数长度)
+* <mark style="color:green;">%args\_substring\_\<arg1>-\<arg2>%</mark> (这个变量会列出从第arg1个参数到第arg2个参数之间的所有参数. 比如, 如果命令是**`/announce I am currently doing a Youtube livestreaming`**, 你可以用%args\_substring\_1-6%来获取第一个参数, 第二个参数,...,第六个参数，显示为**I am currencurrently doing a Youtube**. 如果你不管参数有多长都要获取, 你可以用类似于100的大数来代替6来获取所有参数)
 {% endhint %}
 
 ## PLAYER CHAT
 
-Event called when a player writes something in chat.
+玩家聊天时触发.
 
 ```yaml
 example:
@@ -147,12 +147,12 @@ example:
 {% hint style="success" %}
 **Variables:**
 
-* <mark style="color:green;">%message%</mark> (The chat message)
+* <mark style="color:green;">%message%</mark> (玩家输入的消息)
 {% endhint %}
 
 ## PLAYER LEVELUP
 
-&#x20;Event called when a player changes its level.
+&#x20;玩家等级改变时触发.
 
 ```yaml
 example:
@@ -165,13 +165,13 @@ example:
 {% hint style="success" %}
 **Variables:**
 
-* <mark style="color:green;">%old\_level%</mark> (The previous level of the player)
-* <mark style="color:green;">%new\_level%</mark> (The new level of the player)
+* <mark style="color:green;">%old\_level%</mark> (玩家先前的等级)
+* <mark style="color:green;">%new\_level%</mark> (玩家现在的等级)
 {% endhint %}
 
 ## PLAYER WORLD CHANGE
 
-Event called when a player is moving to another world.
+玩家改变所在世界时触发.
 
 ```yaml
 example:
@@ -184,15 +184,15 @@ example:
 {% hint style="success" %}
 **Variables:**
 
-* <mark style="color:green;">%world\_from%</mark> (The previous world)
-* <mark style="color:green;">%world\_to%</mark> (The world where the player is moving to)
-* <mark style="color:green;">%online\_players\_from%</mark> (Amount of online players in the previous world)
-* <mark style="color:green;">%online\_players\_to%</mark> (Amount of online players in the world where the player is moving to)
+* <mark style="color:green;">%world\_from%</mark> (先前所在的世界)
+* <mark style="color:green;">%world\_to%</mark> (玩家前往的世界)
+* <mark style="color:green;">%online\_players\_from%</mark> (先前玩家所在世界的玩家数量)
+* <mark style="color:green;">%online\_players\_to%</mark> (玩家前往世界的玩家数量)
 {% endhint %}
 
 ## PLAYER ATTACK
 
-Event called when a player damages an entity.
+玩家攻击时触发.
 
 ```yaml
 example:
@@ -212,19 +212,19 @@ example:
 {% hint style="success" %}
 **Variables:**
 
-* <mark style="color:green;">%damage%</mark> (Damage made by the player)
-* <mark style="color:green;">%attack\_type%</mark> (Type of the damage. For projectiles it could be: ARROW, TRIDENT, SNOWBALL. If the damage is not made by a projectile, it will result in PLAYER)
+* <mark style="color:green;">%damage%</mark> (玩家所造成的伤害)
+* <mark style="color:green;">%attack\_type%</mark> (伤害物的种类，对于抛射物来说，可以是: ARROW, TRIDENT, SNOWBALL. 如果伤害并非来源于抛射物, 那么会返回PLAYER)
 * ConditionalEvents <mark style="color:green;">item variables</mark> (for item in hand)
 * ConditionalEvents <mark style="color:green;">victim variables</mark>
 {% endhint %}
 
 {% hint style="info" %}
-On this event you can use target player variables and to\_target actions.
+此事件可以使用目标玩家变量(%target:XXXXX%)和to\_target动作.
 {% endhint %}
 
 ## PLAYER KILL
 
-Event called when a player kills an entity.
+玩家击杀生物时触发
 
 ```yaml
 example:
@@ -239,17 +239,17 @@ example:
 {% hint style="success" %}
 **Variables:**
 
-* ConditionalEvents <mark style="color:green;">item variables</mark> (for item in hand)
-* ConditionalEvents <mark style="color:green;">victim variables</mark>
+* ConditionalEvents [<mark style="color:green;">物品变量</mark>](../bian-liang.md#wu-pin-bian-liang) (用于手上物品)
+* ConditionalEvents [<mark style="color:green;">受害者变量</mark>](../bian-liang.md#shou-hai-zhe-bian-liang)
 {% endhint %}
 
 {% hint style="info" %}
-On this event you can use target player variables and to\_target actions.
+此事件可以使用目标玩家变量(%target:XXXXX%)和to\_target动作.
 {% endhint %}
 
 ## PLAYER DAMAGE
 
-Event called when a player is taking damage.
+玩家受伤时触发.
 
 ```yaml
 example:
@@ -264,16 +264,16 @@ example:
 {% hint style="success" %}
 **Variables:**
 
-* <mark style="color:green;">%cause%</mark> (Cause of the event. How did the player got damaged. All causes here: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html))
-* <mark style="color:green;">%damage%</mark> (Damage taken by the player)
-* <mark style="color:green;">%damager\_type%</mark> (If the player takes damage from an entity, which type of entity. All types on this link: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html))
-* <mark style="color:green;">%damager\_name%</mark> (If the player takes damage from an entity, the name of this entity without color codes)
-* <mark style="color:green;">%damager\_color\_format\_name%</mark> (The name of the damager including color codes)
+* <mark style="color:green;">%cause%</mark> (受伤的原因。原因列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html))
+* <mark style="color:green;">%damage%</mark> (玩家受到的伤害)
+* <mark style="color:green;">%damager\_type%</mark> (如果玩家受到的伤害来自实体，实体种类，种类列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html))
+* <mark style="color:green;">%damager\_name%</mark> (如果玩家受到的伤害来自实体，实体不带颜色的名字)
+* <mark style="color:green;">%damager\_color\_format\_name%</mark> (带颜色的名字)
 {% endhint %}
 
 ## PLAYER ARMOR
 
-Event called when a player equips or unequips armor.
+玩家穿戴护甲时触发.
 
 ```yaml
 example:
@@ -292,14 +292,14 @@ example:
 {% hint style="success" %}
 **Variables:**
 
-* <mark style="color:green;">%armor\_type%</mark> (Type of the armor. Could be: HELMET, CHESTPLATE, LEGGINGS or BOOTS)
-* <mark style="color:green;">%equip\_type%</mark> (Could be: EQUIP or UNEQUIP)
-* ConditionalEvents <mark style="color:green;">item variables</mark>
+* <mark style="color:green;">%armor\_type%</mark> (护甲种类. 可为: HELMET, CHESTPLATE, LEGGINGS or BOOTS)
+* <mark style="color:green;">%equip\_type%</mark> (可为: EQUIP(装备) 或 UNEQUIP(脱下))
+* ConditionalEvents [物品变量](../bian-liang.md#wu-pin-bian-liang)
 {% endhint %}
 
 ## PLAYER TELEPORT
 
-Event called when a player teleports somehow.
+玩家传送时触发
 
 ```yaml
 example:
@@ -315,20 +315,20 @@ example:
 {% hint style="success" %}
 **Variables:**
 
-* <mark style="color:green;">%cause%</mark> (Cause of the event. Why is the player teleporting. All causes here: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerTeleportEvent.TeleportCause.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerTeleportEvent.TeleportCause.html))
-* <mark style="color:green;">%from\_x%</mark> (Coordinate X of the previous location)
-* <mark style="color:green;">%from\_y%</mark> (Coordinate Y of the previous location)
-* <mark style="color:green;">%from\_z%</mark> (Coordinate Z of the previous location)
-* <mark style="color:green;">%from\_world%</mark> (World of the previous location)
-* <mark style="color:green;">%to\_x%</mark> (Coordinate Z of the new location)
-* <mark style="color:green;">%to\_y%</mark> (Coordinate Y of the new location)
-* <mark style="color:green;">%to\_x%</mark> (Coordinate X of the new location)
-* <mark style="color:green;">%to\_world%</mark> (World of the new location)
+* <mark style="color:green;">%cause%</mark> (传送原因. 原因列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerTeleportEvent.TeleportCause.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerTeleportEvent.TeleportCause.html))
+* <mark style="color:green;">%from\_x%</mark> (玩家原来所在处的X坐标)
+* <mark style="color:green;">%from\_y%</mark> (Y)
+* <mark style="color:green;">%from\_z%</mark> (Z)
+* <mark style="color:green;">%from\_world%</mark> (原来的世界)
+* <mark style="color:green;">%to\_x%</mark> (现在的X坐标)
+* <mark style="color:green;">%to\_y%</mark> (Y)
+* <mark style="color:green;">%to\_z%</mark> (Z)
+* <mark style="color:green;">%to\_world%</mark> (现在的世界)
 {% endhint %}
 
 ## PLAYER BED ENTER
 
-Event called when a player enters a bed.
+玩家上床时触发.
 
 ```yaml
 example:
@@ -345,16 +345,16 @@ example:
 {% hint style="success" %}
 **Variables:**
 
-* <mark style="color:green;">%result%</mark> (Result of the event. Can the player really use the bed? All results here: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerBedEnterEvent.BedEnterResult.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerBedEnterEvent.BedEnterResult.html))
+* <mark style="color:green;">%result%</mark> (上床原因? 原因列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerBedEnterEvent.BedEnterResult.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerBedEnterEvent.BedEnterResult.html))
 {% endhint %}
 
 {% hint style="warning" %}
-Only works on 1.13+!
+只在1.13+可用!
 {% endhint %}
 
 ## PLAYER SWAP HAND
 
-Event called when a player swap items between main hand and off hand using the hotkey.
+玩家用快捷键切换主副手物品时触发.
 
 ```yaml
 example:
@@ -367,12 +367,12 @@ example:
 {% hint style="success" %}
 **Variables:**
 
-* ConditionalEvents <mark style="color:green;">item variables</mark> (for item in main hand)
+* ConditionalEvents [物品变量](../bian-liang.md#wu-pin-bian-liang) (用于手上物品)
 {% endhint %}
 
 ## PLAYER FISH
 
-Event called when a player is fishing.
+玩家钓鱼时触发.
 
 ```yaml
 example:
@@ -389,14 +389,14 @@ example:
 {% hint style="success" %}
 **Variables:**
 
-* <mark style="color:green;">%state%</mark> (Current state of fishing. All states here: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerFishEvent.State.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerFishEvent.State.html))
-* <mark style="color:green;">%caught\_type%</mark> (Entity caught. All entity types here: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html))
-* ConditionalEvents <mark style="color:green;">item variables</mark> (for caught item if present)
+* <mark style="color:green;">%state%</mark> (当前钓鱼的状态. 状态列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerFishEvent.State.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/player/PlayerFishEvent.State.html))
+* <mark style="color:green;">%caught\_type%</mark> (抓到的实体. 实体列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html))
+* ConditionalEvents [<mark style="color:green;">物品变量</mark>](../bian-liang.md#wu-pin-bian-liang) (如存在，表示钓到的物品)
 {% endhint %}
 
 ## PLAYER OPEN INVENTORY
 
-Event called when a player opens an inventory.
+玩家打开容器时触发.
 
 ```yaml
 example:
