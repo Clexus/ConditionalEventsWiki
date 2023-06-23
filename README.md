@@ -142,7 +142,7 @@ example7:
 ```
 {% endtab %}
 
-{% tab title="例子7" %}
+{% tab title="例子8" %}
 用命令来检测别的玩家的等级
 
 ```

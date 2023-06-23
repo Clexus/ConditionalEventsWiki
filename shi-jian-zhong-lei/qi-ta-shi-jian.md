@@ -77,6 +77,46 @@ example:
 这个事件不是玩家事件，你不能使用玩家相关的变量.
 {% endhint %}
 
+## SERVER START
+
+服务器启动且本插件加载唤起
+
+```
+example:
+  type: server_start
+  actions:
+    default:
+    - "console_command: ce enable event1"
+```
+
+{% hint style="info" %}
+此事件没有变量，但是你仍然可以使用ConditionalEvents的变量或者PlaceholderAPI的变量。
+{% endhint %}
+
+{% hint style="warning" %}
+这个事件不是玩家事件，你不能使用玩家相关的变量.
+{% endhint %}
+
+## SERVER STOP
+
+服务器关闭且此插件卸载时唤起
+
+```yaml
+example:
+  type: server_stop
+  actions:
+    default:
+    - "to_all: message: &c&lCLOSING SERVER, WE ARE BACK SOON."
+```
+
+{% hint style="info" %}
+此事件没有变量，但是你仍然可以使用ConditionalEvents的变量或者PlaceholderAPI的变量。
+{% endhint %}
+
+{% hint style="warning" %}
+这个事件不是玩家事件，你不能使用玩家相关的变量.
+{% endhint %}
+
 ## REPETITIVE
 
 repetitive事件为每个**玩家**周期性地检查条件。时间在`repetitive_time`下定义，以刻为单位，20秒为1刻
