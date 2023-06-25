@@ -18,7 +18,7 @@ example:
 {% hint style="success" %}
 **变量:**
 
-* <mark style="color:green;">%action\_type%</mark> (可为: RIGHT\_CLICK, LEFT\_CLICK, SHIFT\_RIGHT\_CLICK, SHIFT\_LEFT\_CLICK 或 PHYSICAL. PHYSICAL用于检测玩家是否在压力板上\[存疑，PHYSICAL不应该存在于此处])
+* <mark style="color:green;">%action\_type%</mark> (可为: RIGHT\_CLICK, LEFT\_CLICK, SHIFT\_RIGHT\_CLICK, SHIFT\_LEFT\_CLICK)
 * ConditionalEvents [<mark style="color:green;">物品变量</mark>](../bian-liang.md#wu-pin-bian-liang)
 {% endhint %}
 
