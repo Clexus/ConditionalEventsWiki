@@ -22,7 +22,7 @@ cancel_drop: true
 
 ### SET DAMAGE（设置伤害）
 
-只在player\_attack中才能使用。可以调整攻击的伤害
+只在player\_attack和player\_damage事件中才能使用。可以调整攻击的伤害
 
 ```
 //设置固定伤害
