@@ -179,7 +179,7 @@ example1:
     - '%victim% equals PLAYER'
     - '%item% equals DIAMOND_SWORD'
     - '%item_name% equals 极霸剑'
-    - '%random_1-10% >= 8'
+    - '%random_1_10% >= 8'
     actions:
       default:
       - 'message: &aYour diamond sword poison effect was activated!'

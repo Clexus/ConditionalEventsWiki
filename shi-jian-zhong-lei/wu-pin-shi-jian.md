@@ -31,7 +31,7 @@ example:
   type: item_consume
   conditions:
   - '%item% == GOLDEN_APPLE'
-  - '%random_1-10% >= 8'
+  - '%random_1_10% >= 8'
   actions:
     default:
     - "give_potion_effect: INCREASE_DAMAGE;120;1;false"

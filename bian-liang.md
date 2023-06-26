@@ -12,7 +12,7 @@
 * **%player\_gamemode%** _玩家游戏模式_
 * **%playerhas\_potioneffect\_\<type>%** _(会检查玩家是否有_ [_https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html_](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html) _列表中的药水效果. 会返回 'true' 或 'false')_
 * **%player\_is\_sneaking%** _(玩家是否蹲下，会返回 'true' 或 'false')_
-* **%random\_min-max%** _(会从 "min" 到 "max" 之间随机选取一个整数. 比如: %random\_1-10% 会生成 1 到 10之间的整数)_&#x20;
+* **%random\_min\_max%** _(会从 "min" 到 "max" 之间随机选取一个整数. 比如: %random\_-1\_10% 会生成- 1 到 10之间的整数)_&#x20;
 * **%playerarmor\_\<type>%** _(某位置护甲材质. 用以下值替换 \<type> : helmet, chestplate, leggings 或 boots)_&#x20;
 * **%playerarmor\_name\_\<type>%** _(盔甲名)_
 * **%block\_at\_\<x>\_\<y>\_\<z>\_\<world>%** _(某位置特定方块的材质)_

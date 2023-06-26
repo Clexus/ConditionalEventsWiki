@@ -19,7 +19,7 @@ conditions:
 - '%victim% == PLAYER'
 - '%item% == DIAMOND_SWORD'
 - '%item_name% == 极霸剑'
-- '%random_1-10% >= 8'
+- '%random_1_10% >= 8'
 ```
 
 ## Actions(动作)
