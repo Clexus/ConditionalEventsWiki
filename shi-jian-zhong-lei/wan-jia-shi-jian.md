@@ -472,3 +472,46 @@ example:
 
 * <mark style="color:green;">%is\_sneaking%</mark> (玩家是否下蹲. 会返回 "true" 或 "false")
 {% endhint %}
+
+## PLAYER RUN
+
+玩家切换奔跑状态时触发(开始或停止都可以)
+
+```
+example:
+  type: player_run
+  conditions:
+  - "%is_running% == true execute actions1"
+  actions:
+    actions1:
+    - "message: &eRunning"
+    default:
+    - "message: &eStopped running"
+```
+
+{% hint style="success" %}
+**变量：**
+
+* <mark style="color:green;">%is\_running%</mark> (玩家是否在奔跑，会返回“true”或“false“）
+{% endhint %}
+
+## PLAYER REGAIN HEALTH
+
+玩家回血时触发
+
+```yaml
+example:
+  type: player_regain_health
+  conditions:
+  - "%reason% == SATIATED"
+  actions:
+    default:
+    - 'cancel_event: true'
+```
+
+{% hint style="success" %}
+**Variables:**
+
+* <mark style="color:green;">%reason%</mark> (回血的原因. 原因列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityRegainHealthEvent.RegainReason.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityRegainHealthEvent.RegainReason.html))
+* <mark style="color:green;">%amount%</mark> (回血量)
+{% endhint %}
