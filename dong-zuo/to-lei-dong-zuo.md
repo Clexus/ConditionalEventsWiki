@@ -28,6 +28,44 @@
 - 'to_world: %player_world%: message: &6你好世界!'
 ```
 
+### TO RANGE(对特定范围)
+
+你可以对一定范围内的玩家执行动作，可以自行选择是否包括触发动作的人。格式：
+
+`to_range: <半径>;<是否包含本人>: <动作>`
+
+```
+to_range: 10;false: message: &6This message is sended to all players in a radius of 10 blocks!
+```
+
+### TO PLAYER(对特定玩家)
+
+会对特定玩家执行动作
+
+格式:`to_player: <玩家>: <动作>`
+
+```yaml
+example:
+    type: player_command
+    conditions:
+    - "%main_command% == /message"
+    - "%args_length% < 2 execute error1"
+    - "%parseother_{arg_1}_{player_online}% == no execute error2"
+    actions:
+      default:
+      - "cancel_event: true"
+      - "message: &d[PM] &8[&eYou &7-> &e%arg_1%&8]&7: &f%args_substring_2-99%"
+      - "to_player: %arg_1%: message: &d[PM] &8[&e%player% -> &eYou&8]&7: &f%args_substring_2-99%"
+      error1:
+      - "cancel_event: true"
+      - "message: &cYou must use &7/message <player> <text>"
+      error2:
+      - "cancel_event: true"
+      - "message: &cThat player is not online."
+```
+
+这个例子里，当你输入/message <玩家名> <文字>的时候，当玩家在线时会发送消息给他。
+
 ### TO CONDITION（对特定条件）
 
 它将会为执行条件成功的所玩家执行动作。需要在配置文件先建立一个条件组，类似下方：
