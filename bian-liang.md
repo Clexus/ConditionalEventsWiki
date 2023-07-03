@@ -16,8 +16,7 @@
 * **%playerarmor\_\<type>%** _(某位置护甲材质. 用以下值替换 \<type> : helmet, chestplate, leggings 或 boots)_&#x20;
 * **%playerarmor\_name\_\<type>%** _(盔甲名)_
 * **%block\_at\_\<x>\_\<y>\_\<z>\_\<world>%** _(某位置特定方块的材质)_
-* **%block\_below%** _(玩家脚下方块的材质)_
-* **%block\_below\_\<distance>%** (玩家脚下一定距离的方块的材质)
+* **%playerblock\_below\_\<distance>%** (玩家脚下一定距离的方块的材质)
 * **%playerblock\_above\_\<distance>%** (玩家头上一定距离的方块的材质)
 * **%playerblock\_inside%** (玩家所在的方块之中，用于一些特殊的方块比如水、岩浆，又比如你站在头颅/台阶上时的头颅和台阶)
 * **%random\_player%** _(随机选择一名服务器内玩家，如果没有会返回"none")_
