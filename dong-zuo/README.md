@@ -106,23 +106,23 @@ offset: 要生成的粒子的分散分布状态
 {% endhint %}
 
 {% hint style="info" %}
-nRedstone particle with colors setting the effect to: \
+你可以生成一个有颜色的红石粒子，只需要使用以下格式: \
 `REDSTONE;<red>;<green>;<blue>`\
-Color codes: [https://htmlcolorcodes.com/](https://htmlcolorcodes.com/)
+: [https://htmlcolorcodes.com/](https://htmlcolorcodes.com/)
 {% endhint %}
 
 {% hint style="warning" %}
-Only works on 1.9+
+只在 1.9+ 工作
 {% endhint %}
 
 {% tabs %}
-{% tab title="Example 1" %}
+{% tab title="例子 1" %}
 ```yaml
 particle: effect:EXPLOSION_LARGE offset:0.1;0.1;0.1 speed:1 amount:5
 ```
 {% endtab %}
 
-{% tab title="Example 2" %}
+{% tab title="例子 2" %}
 ```yaml
 particle: effect:REDSTONE;25;229;198 offset:0.1;0
 ```
@@ -158,3 +158,26 @@ example2:
 ```
 
 ## Execute Action Group(执行动作组)
+
+从事件随机执行动作组。请使用以下格式`execute_action_group: <组1>:<概率1>;<组N>:<概率N>` <组N>指的是事件创造的动作组，<概率N>指的是这个组被执行的概率(加起来可以不等于100%，它们是分别计算的)
+
+{% hint style="info" %}
+如果你只想执行一个单独的动作组, 而不要随机概率, 可以直接这么写: `execute_action_group: <组1>:100`
+{% endhint %}
+
+```yaml
+example:
+    type: player_command
+    conditions:
+    - "%main_command% == /randomfirework"
+    actions:
+      default:
+      - "cancel_event: true"
+      - "execute_action_group: firework1:70;firework2:30;firework3:30"
+      firework1:
+      - "firework: colors:YELLOW,RED type:BALL fade:AQUA power:0"
+      firework2:
+      - "firework: colors:BLACK,WHITE type:BURST power:1"
+      firework3:
+      - "firework: colors:GREEN,BLUE type:BURST power:1"
+```
