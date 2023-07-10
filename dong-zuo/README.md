@@ -71,7 +71,7 @@ remove_item: "%checkitem_remove_mat:COAL_BLOCK,nameequals:&aBurst &6Turret,amt:1
 ### Firework(放烟花)
 
 这是 **firework** 动作的格式:\
-`firework: colors:<颜色1>,<颜色2> type:<种类> fade:<颜色1>,<颜色2> power:<飞行时间>`
+`firework: colors:<颜色1>,<颜色2> type:<种类> fade:<颜色1>,<颜色2> power:<飞行时间>(可选，定义位置)location:<x>;<y>;<z>;<世界>`
 
 {% hint style="warning" %}
 fade属性可选，其他的是必需的，你可以添加多个颜色
@@ -91,9 +91,70 @@ firework: colors:YELLOW,RED type:BALL fade:AQUA power:0
 
 {% tab title="例子2" %}
 ```
-firework: colors:BLACK,WHITE type:BURST power:1
+firework: colors:BLACK,WHITE type:BURST power:1 location:%block_x%;%block_y%;%block_z%;%block_world%
+```
+{% endtab %}
+{% endtabs %}
+
+### Particle(生成粒子)
+
+在玩家所在位置生成一个粒子，请使用此格式:`particle: effect:<粒子种类> offset:<x方向偏移量，以此类推>;<y>;<z> speed:<粒子速度> amount:<数量> (可选)location:<x>;<y>;<z>;<世界名>`
+
+{% hint style="info" %}
+粒子种类: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html)\
+offset: 要生成的粒子的分散分布状态
+{% endhint %}
+
+{% hint style="info" %}
+nRedstone particle with colors setting the effect to: \
+`REDSTONE;<red>;<green>;<blue>`\
+Color codes: [https://htmlcolorcodes.com/](https://htmlcolorcodes.com/)
+{% endhint %}
+
+{% hint style="warning" %}
+Only works on 1.9+
+{% endhint %}
+
+{% tabs %}
+{% tab title="Example 1" %}
+```yaml
+particle: effect:EXPLOSION_LARGE offset:0.1;0.1;0.1 speed:1 amount:5
+```
+{% endtab %}
+
+{% tab title="Example 2" %}
+```yaml
+particle: effect:REDSTONE;25;229;198 offset:0.1;0
 ```
 {% endtab %}
 {% endtabs %}
 
 ### Call Event(唤起其他事件)
+
+执行一个“call”类事件，请使用此格式:`call_event: <事件名>;%变量名1%=<值1>;%变量名N%=<值N>`
+
+{% hint style="info" %}
+你可以传递多个变量，但是它们是可选的，你也可以不传递任何变量
+{% endhint %}
+
+```
+example:
+    type: player_command
+    conditions:
+    - "%main_command% == /test"
+    actions:
+      default:
+      - "cancel_event: true"
+      - "message: This is a test message from event 'example'"
+      - "call_event: example2;%example_variable%=Something"
+
+example2:
+    type: call
+    conditions:
+    - "%example_variable% == Something"
+    actions:
+      default:
+      - "message: This message will be sent only when event 'example2' is called"
+```
+
+## Execute Action Group(执行动作组)
