@@ -132,6 +132,68 @@ particle: effect:REDSTONE;25;229;198 offset:0.1;0
 {% endtab %}
 {% endtabs %}
 
+### Give Item(给予物品)
+
+给玩家一个物品. 格式如下: `give_item: id:<物品ID>;<属性>:<对应值>;<属性N>:<对应值N>`
+
+{% hint style="info" %}
+**全局属性:**
+
+id:<物品ID> (必须, 可用ID见此: [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html))\
+amount:<数量>\
+durability:<耐久值>\
+custom\_model\_data:<自定义模型数据>\
+name:<名字>\
+lore:<第一行迷哦书>|<第N行描述>\
+enchants:<附魔1>-<等级1>|<附魔N>-<等级N> (所有附魔名称: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html))\
+flags:<标志1>|<标志N> (所有可用标志: [https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/ItemFlag.html](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/inventory/ItemFlag.html))\
+
+
+**仅限玩家头颅的属性:**
+
+skull\_texture:<头颅材质值> (头颅的材质值(Texture value). 见此: [https://minecraft-heads.com/custom-heads](https://minecraft-heads.com/custom-heads))\
+skull\_owner:<头颅主人> (玩家名)\
+skull\_id:<头颅ID> (头颅的ID，可在这里找到 [https://minecraft-heads.com/custom-heads](https://minecraft-heads.com/custom-heads))
+{% endhint %}
+
+{% tabs %}
+{% tab title="例子 1" %}
+```yaml
+give_item: id:IRON_HELMET;amount:1;name:&6Basic Helmet
+```
+{% endtab %}
+
+{% tab title="例子 2" %}
+```yaml
+give_item: id:NETHERITE_SWORD;amount
+```
+{% endtab %}
+
+{% tab title="例子3" %}
+```
+give_item: id:PLAYER_HEAD;amount:16;skull_owner:%player_name%
+```
+{% endtab %}
+{% endtabs %}
+
+### Drop Item(掉落物品)
+
+在某个位置掉落物品
+
+格式: `drop_item: location:<x>,<y>,<z>,<world>;id:<id>;<property>:<value>;<propertyN>:<valueN>`
+
+{% hint style="info" %}
+全局属性：
+
+location:\<x>,\<y>,\<z>,<世界名>(必填)
+
+其他的和上方一样&#x20;
+{% endhint %}
+
+```
+drop_item: location:%block_x%,%block_y%,%block_z%,%block_world%;id:DIAMOND;name:&bUnique Diamond
+```
+
 ### Call Event(唤起其他事件)
 
 执行一个“call”类事件，请使用此格式:`call_event: <事件名>;%变量名1%=<值1>;%变量名N%=<值N>`
