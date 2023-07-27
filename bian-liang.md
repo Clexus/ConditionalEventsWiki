@@ -40,6 +40,8 @@
 * **%item\_color\_format\_name%** _(带颜色的物品名)_
 * **%item\_lore%** _(物品的描述)_
 * **%item\_lore\_line\_X%** _(物品的第X行描述)_
+* **%item\_color\_format\_lore%** _(物品的描述，但是带颜色)_
+* **%item\_color\_format\_lore\_line\_X%** _(物品的第X行描述，但是带颜色)_
 * **%item\_custom\_model\_data%** _(物品的自定义模型数据值)_
 * **%item\_meta%** _(提供物品更详细内容的文本，比如药水效果之类的)_
 
