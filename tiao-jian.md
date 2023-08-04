@@ -94,6 +94,24 @@ example:
 带"execute"的条件中，"execute"需要被加在最后面。你可以创建尽你所需的数量的动作。
 {% endhint %}
 
+### 在Execute选项中的and条件
+
+and条件在一些使用execute选项的事件中十分有用。比如，想象一个和上面相同的事件，你想要根据玩家地位不同发送不同信息，但是这次你还想检测玩家的经验等级：
+
+```
+example:
+    type: player_join
+    conditions:
+    - '%vault_rank% equals admin execute actions1'
+    - '%vault_rank% equals vip and %player_level% > 20 execute actions2'
+    actions:
+      default: []
+      actions1:
+      - 'to_all: message: &4&lADMIN &c%player% &ejoined the game.'
+      actions2:
+      - 'to_all: message: &b&lVIP &a%player% &ejoined the game.'
+```
+
 ### 参数
 
 在execute条件中你可以添加可选的参数来减少动作组数量，以此精简你的配置。
