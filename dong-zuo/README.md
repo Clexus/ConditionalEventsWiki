@@ -223,7 +223,7 @@ example2:
       - "message: This message will be sent only when event 'example2' is called"
 ```
 
-## Execute Action Group(执行动作组)
+### Execute Action Group(执行动作组)
 
 从事件随机执行动作组。请使用以下格式`execute_action_group: <组1>:<概率1>;<组N>:<概率N>` <组N>指的是事件创造的动作组，<概率N>指的是这个组被执行的概率(加起来可以不等于100%，它们是分别计算的)
 
@@ -247,3 +247,45 @@ example:
       firework3:
       - "firework: colors:GREEN,BLUE type:BURST power:1"
 ```
+
+### Set Block(设置方块)
+
+在世界的特定位置放置方块，请使用此格式：`setblock: location:<x>,<y>,<z>,<世界名>;id:<方块id>;block_data:<方块数据>` 只在1.13+可以使用
+
+{% hint style="info" %}
+**一般属性:**
+
+location:\<x>,\<y>,\<z>,<世界名> (必须)
+
+\
+**可选属性：**
+
+**Block data**
+
+block data 属性是可选的，代表了方块可以有的某些状态。比如台阶方块可以有东南西北四个朝向。农作物方块有生长年龄。
+
+请使用此格式添加: `<属性1>=<值1>,<属性N>=<值N>`
+
+所有可用的方块数据: [https://minecraft.fandom.com/wiki/Java\_Edition\_data\_values#Block\_states](https://minecraft.fandom.com/wiki/Java\_Edition\_data\_values#Block\_states)
+{% endhint %}
+
+{% tabs %}
+{% tab title="例子 1" %}
+```yaml
+set_block: location:50,50,-256,world;id:DIAMOND_BLOCK
+```
+{% endtab %}
+
+{% tab title="例子 2" %}
+```yaml
+# 用于再生方块
+set_block: location:%block_x%,%block_y%,%block_z%,%block_world%;%id:%block%;block_data:%block_data%
+```
+{% endtab %}
+
+{% tab title="例子 3" %}
+```yaml
+set_block: location:50,50,-256,world;id:CHEST;block_data:facing=north
+```
+{% endtab %}
+{% endtabs %}
