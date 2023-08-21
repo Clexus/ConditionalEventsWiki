@@ -107,6 +107,32 @@
       - 'to_target: message: &c你被 &e%player%&c 附加了中毒效果!'
 ```
 
+## To类变量
+
+当使用 [To类动作](dong-zuo/to-lei-dong-zuo.md) 时, 你可以直接从被选中的玩家获取变量.只需要在真正的变量前添加 **"to:"** 即可.
+
+* 举个例子，你想显示被选中玩家的名字，你不能使用 **%player%** (这是触发事件的玩家的名字), 你需要使用的是 **%to:player%**.
+
+这里有两个例子:
+
+```yaml
+example:
+  type: call
+  actions:
+    default:
+    - "console_message: &7向所有人发送信息"
+    - "to_all: message: &e你好 &c%to:player%, &e欢迎来到服务器!"
+
+example2:
+  type: player_command
+  conditions:
+  - "%main_command% == /hello"
+  actions:
+    default:
+    - "cancel_event: true"
+    - "to_range: 10;false: message: &6%player%说: &7你好%to:player%!"
+```
+
 ## 变量中的变量
 
 有些情况下你可能需要把一个变量放在另一个变量中，比如用PlaceholderAPI的Math变量扩展来计算数据并把结果返回到CE的变量中。
