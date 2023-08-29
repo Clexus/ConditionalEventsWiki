@@ -214,8 +214,8 @@ example:
 
 * <mark style="color:green;">%damage%</mark> (玩家所造成的伤害)
 * <mark style="color:green;">%attack\_type%</mark> (伤害物的种类，对于抛射物来说，可以是: ARROW, TRIDENT, SNOWBALL. 如果伤害并非来源于抛射物, 那么会返回PLAYER)
-* ConditionalEvents <mark style="color:green;">item variables</mark> (for item in hand)
-* ConditionalEvents <mark style="color:green;">victim variables</mark>
+* ConditionalEvents <mark style="color:green;">物品变量</mark> (用于手上物品)
+* ConditionalEvents <mark style="color:green;">受害者变量</mark>
 {% endhint %}
 
 {% hint style="info" %}
