@@ -24,6 +24,7 @@
 * **%randomword\_\<word1>-\<word2>-\<wordN>%** (随即返回指定的文字，文字之间应该用 '-' 隔开)
 * **%is\_nearby\_\<x>\_\<y>\_\<z>\_\<world>\_\<radius>%** _(检查玩家是否在某个世界的某个坐标范围内，会返回 'true' 或 'false')_
 * **%world\_time\_\<world>%** _(世界时间，按刻计)_
+* **%world\_is\_raining%** _(此世界是否下雨，返回true或false)_
 * **%empty%** _(一个会返回空的特殊变量. 你可以把它用来比较其他也可能返回空值的变量。)_
 * **%random\_min\_max%** (会随机生成min到max之间\[包含]的数字，例如%random\_1\_10%会生成1-10之间的数字)
 
