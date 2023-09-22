@@ -214,6 +214,7 @@ example:
 
 * <mark style="color:green;">%damage%</mark> (玩家所造成的伤害)
 * <mark style="color:green;">%attack\_type%</mark> (伤害物的种类，对于抛射物来说，可以是: ARROW, TRIDENT, SNOWBALL. 如果伤害并非来源于抛射物, 那么会返回PLAYER)
+* <mark style="color:green;">%original\_damage%</mark> (玩家造成的原始伤害)
 * ConditionalEvents <mark style="color:green;">物品变量</mark> (用于手上物品)
 * ConditionalEvents <mark style="color:green;">受害者变量</mark>
 {% endhint %}
@@ -266,6 +267,7 @@ example:
 
 * <mark style="color:green;">%cause%</mark> (受伤的原因。原因列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html))
 * <mark style="color:green;">%damage%</mark> (玩家受到的伤害)
+* <mark style="color:green;">%original\_damage%</mark> (玩家受到的原始伤害)
 * <mark style="color:green;">%damager\_type%</mark> (如果玩家受到的伤害来自实体，实体种类，种类列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html))
 * <mark style="color:green;">%damager\_name%</mark> (如果玩家受到的伤害来自实体，实体不带颜色的名字)
 * <mark style="color:green;">%damager\_color\_format\_name%</mark> (带颜色的名字)
@@ -415,6 +417,20 @@ example:
 * <mark style="color:green;">%inventory\_type%</mark> (打开容器的种类. 所有的种类: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/InventoryType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/InventoryType.html))
 * <mark style="color:green;">%inventory\_title%</mark> (没有颜色代码的容器名称)
 {% endhint %}
+
+## PLAYER CLOSE INVENTORY
+
+玩家关闭容器时触发
+
+```yaml
+example:
+  type: player_close_inventory
+  conditions:
+  - "%inventory_type% == MERCHANT"
+  actions:
+    default:
+    - "message: &c已关闭交易界面..."
+```
 
 ## PLAYER STATISTIC
 
