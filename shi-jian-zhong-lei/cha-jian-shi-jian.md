@@ -92,7 +92,7 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
 * <mark style="color:green;">%normal\_message%</mark> (包含颜色的聊天消息)
 * <mark style="color:green;">%json\_message%</mark> (收到消息的完整JSON格式)

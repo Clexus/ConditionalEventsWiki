@@ -526,7 +526,7 @@ example:
 ```
 
 {% hint style="success" %}
-**Variables:**
+**变量:**
 
 * <mark style="color:green;">%reason%</mark> (回血的原因. 原因列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityRegainHealthEvent.RegainReason.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityRegainHealthEvent.RegainReason.html))
 * <mark style="color:green;">%amount%</mark> (回血量)
