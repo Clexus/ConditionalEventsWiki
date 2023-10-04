@@ -322,10 +322,14 @@ example:
 * <mark style="color:green;">%from\_y%</mark> (Y)
 * <mark style="color:green;">%from\_z%</mark> (Z)
 * <mark style="color:green;">%from\_world%</mark> (原来的世界)
+* <mark style="color:green;">%from\_yaw%</mark> (传送原点的偏航角度)
+* <mark style="color:green;">%from\_pitch%</mark> (传送原点的俯仰角度)
 * <mark style="color:green;">%to\_x%</mark> (现在的X坐标)
 * <mark style="color:green;">%to\_y%</mark> (Y)
 * <mark style="color:green;">%to\_z%</mark> (Z)
 * <mark style="color:green;">%to\_world%</mark> (现在的世界)
+* <mark style="color:green;">%to\_yaw%</mark> (传送目标地点的偏航角度)
+* <mark style="color:green;">%to\_pitch%</mark> (传送目标地点的俯仰角度)
 {% endhint %}
 
 ## PLAYER BED ENTER

@@ -260,13 +260,19 @@ location:\<x>,\<y>,\<z>,<世界名> (必须)
 \
 **可选属性：**
 
-**Block data**
+**Block data(方块数据)**
 
 block data 属性是可选的，代表了方块可以有的某些状态。比如台阶方块可以有东南西北四个朝向。农作物方块有生长年龄。
 
 请使用此格式添加: `<属性1>=<值1>,<属性N>=<值N>`
 
 所有可用的方块数据: [https://minecraft.fandom.com/wiki/Java\_Edition\_data\_values#Block\_states](https://minecraft.fandom.com/wiki/Java\_Edition\_data\_values#Block\_states)
+
+\
+**Skull data(头颅数据)**
+
+skull\_texture:<头颅纹理值> (头颅纹理值可在此找到: [https://minecraft-heads.com/custom-heads](https://minecraft-heads.com/custom-heads))\
+skull\_owner:<头颅主人> (玩家名)
 {% endhint %}
 
 {% tabs %}

@@ -65,3 +65,32 @@ set_death_message: no
 ```
 prevent_join: &c&lERROR!\n&7You can't access this account with that IP.
 ```
+
+## SET ITEM
+
+这个动作只对 `player_fish` 事件生效. 它可以设置玩家钓鱼钓到的物品.
+
+{% hint style="info" %}
+你可以使用的物品属性在give\_item动作中已经有描述了.
+{% endhint %}
+
+{% hint style="info" %}
+要使用这个动作你首先得保证玩家钓到了一个物品，这需要你对事件做一些检查，可见下面的例子.
+{% endhint %}
+
+```yaml
+格式:
+set_item: <item_properties>
+set_item: id:DIAMOND;name:&bSuspicious Diamond
+```
+
+```yaml
+example:
+  type: player_fish
+  conditions:
+  - "%state% == CAUGHT_FISH" #必需
+  - "%caught_type% == DROPPED_ITEM" #必需
+  actions:
+    default:
+    - "set_item: id:DIAMOND;name:&b可疑的剑"
+```
