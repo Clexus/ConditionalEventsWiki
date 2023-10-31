@@ -535,3 +535,28 @@ example:
 * <mark style="color:green;">%reason%</mark> (回血的原因. 原因列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityRegainHealthEvent.RegainReason.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityRegainHealthEvent.RegainReason.html))
 * <mark style="color:green;">%amount%</mark> (回血量)
 {% endhint %}
+
+## PLAYER CHANGE FOOD
+
+玩家饥饿值变化时唤起
+
+```yaml
+example:
+  type: player_change_food
+  conditions:
+  - "%player_world% == minigames"
+  actions:
+    default:
+    - "cancel_event: true"
+```
+
+{% hint style="success" %}
+**变量:**
+
+* <mark style="color:green;">%old\_food\_level%</mark> (之前的饥饿值)
+* <mark style="color:green;">%new\_food\_level%</mark> (饥饿值变化之后的值)
+{% endhint %}
+
+{% hint style="warning" %}
+此事件仅在1.16+生效!
+{% endhint %}
