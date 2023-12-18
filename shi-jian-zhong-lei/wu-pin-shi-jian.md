@@ -83,6 +83,7 @@ example:
 
 * <mark style="color:green;">%inventory\_type%</mark> (开启容器的种类. 种类列表: [https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/InventoryType.html](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/inventory/InventoryType.html))
 * <mark style="color:green;">%slot%</mark> (选中的栏位)
+* %inventory\_title% (开启容器的标题)
 * ConditionalEvents [<mark style="color:green;">物品变量</mark>](../bian-liang.md#wu-pin-bian-liang)
 {% endhint %}
 

@@ -73,18 +73,20 @@ remove_item: "%checkitem_remove_mat:COAL_BLOCK,nameequals:&aBurst &6Turret,amt:1
 {% endtab %}
 {% endtabs %}
 
-## Remove Item Slot(移除特定槽位物品)
+### Remove Item Slot(移除特定槽位物品)
 
 从玩家的特定背包槽位移除任意数量的物品，格式:\
 `remove_item_slot: <槽位>;<数量>`
 
 {% hint style="info" %}
 **可用槽位:** HAND, OFF\_HAND, HELMET, CHESTPLATE, LEGGINGS, BOOTS\
-对应主手 副手 头盔 胸甲 护腿 靴子的槽位
+对应主手 副手 头盔 胸甲 护腿 靴子的槽位\
+其他可用槽位见此[https://proxy.spigotmc.org/d3e11b631e22f45fc07c3fcd1c7000b2245fed78?url=http%3A%2F%2Fi.imgur.com%2F3YCrfC8.png](https://proxy.spigotmc.org/d3e11b631e22f45fc07c3fcd1c7000b2245fed78?url=http%3A%2F%2Fi.imgur.com%2F3YCrfC8.png)
 {% endhint %}
 
 ```
 remove_item_slot: HAND;1
+remove_item_slot: 0;1
 ```
 
 ### Firework(放烟花)
