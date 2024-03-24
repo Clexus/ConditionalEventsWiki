@@ -1,6 +1,6 @@
 # Table of contents
 
-* [ConditionalEvents Wiki](README.md)
+* [ConditionalEvents Wiki(停更归档)](README.md)
 * [如何开始](ru-he-kai-shi.md)
 * [配置文件教程](pei-zhi-wen-jian-jiao-cheng.md)
 * [事件种类](shi-jian-zhong-lei/README.md)

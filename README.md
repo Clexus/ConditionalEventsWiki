@@ -4,7 +4,11 @@ description: >-
   来自PCD小组
 ---
 
-# ConditionalEvents Wiki
+# ConditionalEvents Wiki(停更归档)
+
+## <mark style="color:red;">该WIKI停止更新</mark>
+
+<mark style="color:red;">因为MCBBS关闭，我不想再更新该插件的wiki了，请去原wiki查看最新动态</mark>
 
 ## 描述
 
